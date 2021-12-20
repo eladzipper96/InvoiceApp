@@ -1,0 +1,32 @@
+@import '../../style_helpers/vars.scss';
+
+.position {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    & img {
+        align-self: center;
+        width: 29rem;
+        height: 25rem;
+    }
+}
+
+.text {
+    align-self: center;
+    font-family: $spartan;
+    margin-top: 5rem;
+
+    & h2 {
+        font-size: 2rem;
+    }
+
+    & p {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        color: #888EB0;
+        text-align: center;
+    }
+}
+
+

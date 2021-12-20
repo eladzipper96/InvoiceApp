@@ -1,0 +1,33 @@
+@import '../style_helpers/vars.scss';
+
+
+.invoices {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 10% 1fr;
+    row-gap: 13rem;
+    justify-items: center;
+    background-color: #f8f8f8;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .invoices {
+        display: grid;
+        grid-template-columns: 1fr; // changed
+        grid-template-rows: 1fr; // changed
+        row-gap: 0rem; // changed
+        justify-items: center;
+        background-color: #f8f8f8;
+    }
+    
+}
+
+
+
+
+
+

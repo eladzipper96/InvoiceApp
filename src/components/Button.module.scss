@@ -1,0 +1,29 @@
+@import '../style_helpers/vars.scss';
+.button {
+    //height: 90%;
+    //width: fit-content;
+    background-color: #7C5DFA;
+    color: white;
+    font-family: $spartan;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 1rem;
+    padding: 2rem 2rem;
+}
+
+.red {
+    background-color: red;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.paid {
+    cursor: not-allowed !important;
+}

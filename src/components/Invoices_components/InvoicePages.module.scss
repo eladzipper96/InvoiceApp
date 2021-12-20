@@ -1,0 +1,84 @@
+@import '../../style_helpers/vars.scss';
+
+.container {
+    margin-top: 20rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    & span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 6rem;
+        //text-align: center;
+        font-size: 1.75rem;
+        font-family: $spartan;
+        font-weight: bolder;
+        margin-right: 1.25rem;
+        cursor: pointer;
+        color: white;
+        border-style: solid;
+        background-color: #7C5DFA;
+        border-color: #7C5DFA;
+        border-width: 2px;
+        border-radius: 50%;
+    }
+
+    & span:hover {
+        background-color: white;
+        color: #7C5DFA;
+    }
+}
+
+.end {
+    background-color: red !important;
+    border-color: red !important;
+
+    &:hover {
+        background-color: white !important;
+        color: red !important;
+    }
+}
+
+.start {
+    background-color: green !important;
+    border-color: green !important;
+
+    &:hover {
+        background-color: white !important;
+        color: green !important;
+    }
+}
+
+.current {
+    background-color: orange !important;
+    border-color: orange !important;
+
+    &:hover {
+        background-color: white !important;
+        color: orange !important;
+    }
+}
+
+@media screen and (max-height: 900px) {
+     .container {
+         margin-top: 7.5rem ;
+     }
+}
+
+
+@media screen and (max-width: 600px) { 
+    .container {
+        z-index: 100;
+        grid-row: 1/2;
+        transform: translateY(-8rem);
+        margin-top: 3rem;
+
+        & span {
+            width: 4rem;
+            height: 4rem;
+            font-size: 1.25rem;
+        }
+    }
+}

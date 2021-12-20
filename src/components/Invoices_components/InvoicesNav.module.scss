@@ -1,0 +1,184 @@
+@import '../../style_helpers/vars.scss';
+
+.main {
+    margin-top: 5rem;
+    grid-column: 1/3;
+    grid-row: 1/-1;
+    width: 50vw;
+    display: grid;
+    grid-template-rows: 5rem 10rem;
+    grid-template-columns: 3fr 1fr 1fr;
+
+}
+
+.headers {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+
+        & h1 {
+            font-family: $spartan;
+            font-size: 3rem;
+        }
+
+        & h4 {
+            margin-top: 1rem;
+            font-family: $spartan;
+            font-size: 1.25rem;
+            color: #888EB0;
+        }
+}
+
+.filter {
+    z-index:10;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $spartan;
+    cursor: pointer;
+    & li {
+        list-style-type: none;
+    }
+
+    & img {
+        margin-left: 0.75rem;
+        width: 8px;
+        height: 5px;
+    
+    }
+}
+
+.newInvoice {
+    height: 90%;
+    width: fit-content;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    background-color: #7C5DFA;
+    color: white;
+    font-family: $spartan;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+
+
+    & img {
+        padding: 0.75rem 0.75rem;
+        margin-right: 1rem;
+        background-color: white;
+        border-radius: 50%;
+    }
+}
+
+.dropdown {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-family: $spartan;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 7.5%;
+    padding: 10px 10px;
+    z-index: 5;
+    
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.input {
+    display: none;
+}
+
+.checkmark {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid gray;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.checkmark::after {
+    content: '\2713';
+    color: white;
+}
+
+input:checked + .checkmark{
+    background-color: #7C5DFA;
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .main {
+        width: 90vw; // changed
+        display: grid;
+        grid-template-rows: 5rem 10rem;
+        grid-template-columns: 2fr 9rem 1fr;
+    
+    }
+
+    .headers {
+        display: flex;
+        flex-direction: column;
+    
+            & h1 {
+                font-family: $spartan;
+                font-size: 2.25rem;
+            }
+    
+            & h4 {
+                font-weight: lighter;
+                font-family: $spartan;
+                font-size: 1.25rem;
+                color: #888EB0;
+            }
+    }
+
+    .filter {
+        margin-right: 2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+    
+        & img {
+            margin-left: 0.75rem;
+            width: 12px;
+            height: 8px;
+        
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 375px) {
+    .newInvoice {
+        padding-right: 0.25rem;
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main {
+        grid-template-columns: 2fr 8rem 1fr
+    }
+}
+

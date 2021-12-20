@@ -1,0 +1,167 @@
+@import '../../style_helpers/vars.scss';
+
+.main {
+    padding-top: 5rem;
+    z-index: 20;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    //height: 90vh;
+    width: 26vw;
+    transform: translateX(-1.2vw);
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.header {
+    font-size: 2rem;
+    font-family: $spartan;
+}
+
+.scroll {
+    overflow-y: scroll;
+    height: 92vh;
+}
+
+//// Belong to EditInvoice.JS Alone ////
+
+.edit_buttons {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-right: 7rem; /// need 2 edit
+    display: flex;
+    justify-content: center;
+    font-family: $spartan;
+}
+
+.edit_cancel {
+    font-size: 1rem;
+    color: #7E88C3;
+    font-weight: bolder;
+    background-color: #F9FAFE;
+    padding: 2rem 3rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.edit_sumbit {
+    background-color: #7C5DFA;
+    color: white;
+    font-family: $spartan;
+    border-style: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 2rem 3rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.newinvoicebuttons{
+    display: flex;
+    align-items: center;
+    //justify-content: center;  
+    //margin-right: 7rem;
+
+    & button {
+        margin-left: 1rem;
+    }
+}
+
+.saveasdraft {
+    background-color: black;
+    color: #888EB0;
+    font-family: $spartan;
+    border-style: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 2rem 3rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.discard {
+    background-color: #F9FAFE;
+    color: #7E88C3;
+    font-family: $spartan;
+    border-style: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 2rem 3rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+        z-index: 20;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        //height: 90vh;
+        width: 100vw;
+        background-color: white;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .scroll {
+        overflow-y: unset;
+        height: unset;
+    }
+
+
+
+    .edit_buttons {
+        margin-right: unset; /// need 2 edit
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1376px) and (min-width: 1200px){ 
+
+    .main {
+        width: 28vw;
+        transform: translateX(0vw);
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 890px){ 
+
+    .main {
+        width: 35vw;
+        transform: translateX(4vw);
+    }
+}
+
+@media screen and (max-width: 889px) and (min-width: 760px){ 
+
+    .main {
+        width: 47vw;
+        transform: translateX(10.6vw);
+    }
+}
+
+@media screen and (max-width: 759px) and (min-width: 600px){ 
+
+    .main {
+        grid-column: 1/3;
+        width: 100%;
+        transform: translateX(0px);
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .newinvoicebuttons {
+        justify-content: center; 
+    }
+
+    .edit_buttons {
+        margin-right: unset; /// need 2 edit
+        justify-content: center;
+    }
+}

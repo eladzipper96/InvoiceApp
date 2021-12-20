@@ -1,0 +1,89 @@
+@import '../style_helpers/vars.scss';
+
+.main {
+        // Those lines valid only when entering /register after user log-in
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+        z-index: 100;
+        // --------------------------------------------------------------------
+        width: 99vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $spartan;
+        background: rgb(124,93,250);
+        background: linear-gradient(249deg, rgba(124,93,250,1) 0%, rgba(146,119,255,1) 92%);
+        overflow-x: hidden;
+    
+        img {
+            margin-bottom: 5rem;
+            width: 100px;
+        }
+}
+
+.box {
+    background-color: white;
+    height: 59rem;
+    padding: 5rem 5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h1 {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    & label {
+        align-self: start;
+        margin-bottom: 1rem;
+    }
+
+    & input {
+        margin-bottom: 2rem;
+    }
+
+    & button {
+        color: white;
+        background: linear-gradient(249deg, rgba(124,93,250,1) 0%, rgba(146,119,255,1) 92%);
+        height: 3rem;
+        width: 20rem;
+        font-family: $spartan;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-color: transparent;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+}
+
+.cancel {
+    background: gray !important;
+}
+
+
+// deals with a problem on iphone 6/7/8 ISO 11
+@media screen and (max-width: 375px) and (min-width: 374px) and (max-height: 700px) {
+    .main {
+        & img {
+            margin-top: 15rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .box {
+        margin-bottom: 5rem;
+    }
+}
+
